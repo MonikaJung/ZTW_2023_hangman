@@ -1,0 +1,10 @@
+create table games(
+game_id integer primary key autoincrement,
+asked varchar(50)       not null,
+asking varchar(50)      not null,
+lettres_count integer   not null    check(lettres_count > 0),
+words_count integer     not null    check(words_count > 0 and words_count <= lettres_count),
+letters_used integer    not null    check(letters_used > 0 and letters_used <= lettres_count),
+category text(150)      not null,
+tries_count integer     not null    check(tries_count > 0),
+guessed varchar(1)      not null    check(guessed is 'F' or guessed is 'T'));

@@ -1,0 +1,17 @@
+insert into
+games(asked, asking, lettres_count, words_count, letters_used, category, tries_count, guessed)
+values ("user1", "user2", 5, 1, 4, "animal", 2, "T");
+
+//test checks - fails:
+
+insert into
+games(asked, asking, lettres_count, words_count, letters_used, category, tries_count, guessed)
+values ("user1", "user2", 5, 1, 8, "animal", 2, "T");
+
+insert into
+games(asked, asking, lettres_count, words_count, letters_used, category, tries_count, guessed)
+values ("user1", "user2", 5, 1, 4, "animal", 2, "L");
+
+insert into
+games(asked, asking, lettres_count, words_count, letters_used, category, tries_count, guessed)
+values ("user1", "user2", 5, 8, 4, "animal", 2, "L");
