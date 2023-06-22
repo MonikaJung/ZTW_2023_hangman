@@ -133,6 +133,14 @@
       text-align:center;
     }
 
+    #hangman-img{
+      width=100%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      border: none;
+      border-radius: 10%;
+      padding-top = 20px;
+    }
+
     </style>
 </head>
 <body>
@@ -222,7 +230,9 @@
 
       <div class="col-5">
         <div id="hangman-image" class=hangman-image">
-         <h2>Hangman:</h2> <!-- Hangman drawing will be dynamically updated here -->
+          <h2 style="padding-top: 15px; padding-bottom:15px;">
+            Mistakes: {{ mistakes }} / {{ max_mistakes }}</h2>
+          <img id="hangman-img" src="static/easy_hangman/{{mistakes}}.png">
         </div>
       </div>
 
