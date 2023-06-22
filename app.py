@@ -8,11 +8,11 @@ LETTER_ACTIVE = ""
 PLAYER1:str = "player1 name"
 PLAYER2:str = "player2 name"
 
-current_mistakes: int = 13
+current_mistakes: int = 6
 current_category: str = "category name"
 current_word_list: list = ["_ _ _", " _ _ _ _ _ _ _ _ _ _ _ _", " _ _ _ _ ",
                            " _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"]
-current_letters:list = [["A", LETTER_USED], ["B", LETTER_ACTIVE], ["C", LETTER_ACTIVE],
+current_letters:list = [["A", LETTER_ACTIVE], ["B", LETTER_ACTIVE], ["C", LETTER_ACTIVE],
                         ["D", LETTER_ACTIVE], ["E", LETTER_ACTIVE], ["F", LETTER_ACTIVE],
                         ["G", LETTER_ACTIVE], ["H", LETTER_ACTIVE], ["I", LETTER_ACTIVE],
                         ["J", LETTER_ACTIVE], ["K", LETTER_ACTIVE], ["L", LETTER_ACTIVE],
@@ -30,7 +30,7 @@ def index():
     return render_template("main_page.html",
                            letters=current_letters,
                            word_list=current_word_list, category=current_category,
-                           plsyer1=PLAYER1, payer2=PLAYER2,
+                           player1=PLAYER1, player2=PLAYER2,
                            mistakes=current_mistakes, max_mistakes=MAX_MISTAKES_EASY)
 
 def choose_letter():

@@ -23,6 +23,18 @@
       color: #fff;
     }
 
+    /* Players nicknames section */
+    .players-text-header{
+      font-size: 22px;
+      color: #4a148c;
+    }
+
+    .players-text-header{
+      font-size: 20px;
+      color: #4a148c;
+    }
+
+
     /* Buttons */
     .btn-primary {
       background-color: #6a1b9a;
@@ -195,10 +207,10 @@
 
       <div class="col-2">
         <div id="players_display">
-          <h3>Guessing payer:</h3>
-          <p>{{ player1 }}</p>
-          <h3>Asking payer:</h3>
-          <p>{{ player2 }}</p>
+          <h3 class="players-text-header">Guessing payer:</h3>
+          <p class="players-text">{{ player1 }}</p>
+          <h3 class="players-text-header">Asking payer:</h3>
+          <p class="players-text">{{ player2 }}</p>
         </div>
       </div>
 
@@ -221,7 +233,7 @@
       <div class="col-4">
         <div id="hangman-image">
           <h2 style="padding-top: 15px; padding-bottom:15px;">
-            Mistakes: {{ mistakes }} / {{ max_mistakes }}</h2>
+            Mistakes:<br>{{ mistakes }} / {{ max_mistakes }}</h2>
           <img id="hangman-img" src="static/easy_hangman/{{mistakes}}.png">
         </div>
       </div>
