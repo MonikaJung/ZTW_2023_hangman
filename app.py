@@ -2,6 +2,8 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+#no need comment
+
 MAX_MISTAKES_EASY: int = 13
 LETTER_USED = "disabled"
 LETTER_ACTIVE = ""
